@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="content">
+	    <div class="navbar">
+		   <div class="left">
+			    <div class="home">	
+				    <a href="index.html">home</a>
+			    </div>
+			    <div class="home">	
+			        <a href="index.html">about</a>
+			    </div>
+		   </div>
+	        <div class="right">
+		        <input type="text" placeholder="Search..">
+		    </div>
+		</div>
+		
+		</div>
+	<div class="body">
+		<div class="items">
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+			<div class="item">
+				<div class="img-bg" style="background-image:url(images/5571.jpg);">
+				</div>
+			<div class="img-content">
+				<div class="name">
+					<h2>Name of Product</h2>
+				</div>
+				<div class="description">
+					<p>Country<br>Rating</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+
+	<script type="text/javascript">
+	
+	const xhr = new XMLHttpRequest();
+	
+	xhr.onload = function(){
+		console.log(this.responseText)
+	};
+	
+	xhr.open('get','test.json');
+
+	xhr.send();
+	</script>
+	<script>
+		const items = document.querySelectorAll('.item');
+		items.forEach(item => {
+			item.addEventListener('mouseover', () =>{
+				item.childNodes[1].classList.add('img-darken');
+			})
+			item.addEventListener('mouseout', () =>{
+				item.childNodes[1].classList.remove('img-darken');
+			})
+		})
+		
+	</script>
+</body>
+</html>
