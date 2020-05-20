@@ -21,7 +21,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 	padding: 38px;
-	background-color: palegoldenrod;
+	background-color: white
 }
 .left{
 	display: flex;
@@ -50,10 +50,11 @@ body{
 .right input[type=text]{
 	float: right;
   padding: 6px;
-  border: none;
+  border: 1px;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+  background-color: wheat;
 }
 .navbr .right button{
 	float: right;

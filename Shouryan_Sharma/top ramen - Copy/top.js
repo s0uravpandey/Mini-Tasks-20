@@ -1,1 +1,1 @@
-alert("Hello World");
+let obj = JSON.parse(test.JSON)
