@@ -6,6 +6,19 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<script type="text/javascript">
+	
+		const xhr = new XMLHttpRequest();
+		
+		xhr.onload = function(){
+			console.log(this.response)
+		};
+		
+		xhr.open('get','https://neilrathi17.github.io/test1/ramen.json');
+	
+		xhr.send();
+		let brand = 
+		</script>
 	<div class="content">
 	    <div class="navbar">
 		   <div class="left">
@@ -20,7 +33,6 @@
 		        <input type="text" placeholder="Search..">
 		    </div>
 		</div>
-		
 		</div>
 	<div class="body">
 		<div class="items">
@@ -161,18 +173,7 @@
 	
 	</div>
 
-	<script type="text/javascript">
 	
-	const xhr = new XMLHttpRequest();
-	
-	xhr.onload = function(){
-		console.log(this.responseText)
-	};
-	
-	xhr.open('get','test.json');
-
-	xhr.send();
-	</script>
 	<script>
 		const items = document.querySelectorAll('.item');
 		items.forEach(item => {
@@ -184,6 +185,12 @@
 			})
 		})
 		
+	</script>
+	<p id='demo'></p>
+	<script>
+		var txt = https://neilrathi17.github.io/test1/ramen.json;
+		var obj = JSON.parse(txt);
+		document.getElementById("demo").innerHTML = obj.Brand + " "+obj.style;
 	</script>
 </body>
 </html>
