@@ -9,8 +9,10 @@ Mini-Tasks for the Summer of 2020.
 |4.| Saksham Jain | Frontend |
 |5.| Saurav Sharma | Frontend |
 |6.| Chirayu Rathi | Frontend |
-|7.| Shruti Shreya | ML |
-|8.| Harshini Raju | ML |
-|9.| Poritish Bardhan | App |
-|10.| Sanjana Sharma | Backend |
+|7.| Abhay Deep Singh | Frontend |
+|8.| Shruti Shreya | ML |
+|9.| Harshini Raju | ML |
+|10.| Poritish Bardhan | App |
+|11.| Sanjana Sharma | Backend |
+
 
