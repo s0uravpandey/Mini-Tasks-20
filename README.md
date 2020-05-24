@@ -12,4 +12,5 @@ Mini-Tasks for the Summer of 2020.
 |7.| Shruti Shreya | ML |
 |8.| Harshini Raju | ML |
 |9.| Poritish Bardhan | App |
+|10.| Sanjana Sharma | Backend |
 
