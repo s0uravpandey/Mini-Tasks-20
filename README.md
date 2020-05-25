@@ -16,6 +16,6 @@ Mini-Tasks for the Summer of 2020.
 |11.| Sanjana Sharma | Backend |
 |12.| Sourav Pandey | ML |
 |13.| Samriddhi | Backend |
-|13.| Sanjana_Sharma | Backend |
+
 
 
