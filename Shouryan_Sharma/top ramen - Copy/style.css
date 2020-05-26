@@ -54,7 +54,7 @@ body{
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
-  background-color: wheat;
+  background-color: bisque;
 }
 .navbr .right button{
 	float: right;
@@ -111,4 +111,35 @@ body{
 .img-darken {
 	transition: 1s;
 	filter: brightness(10%);
+}
+.description {
+	font-size: x-small;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+p {
+	display: inline;
+	word-wrap: break-word;
+}
+.section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.imag img{
+	height: 600px;
+	width: 100%;
+}
+.heading {
+	font-family: Arial, Helvetica, sans-serif;
+	color: teal;
+}
+.noodle {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.Searchbar {
+	display: inline;
+	shape-outside: margin-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	box-shadow: burlywood;
+	border-radius: 20px;
 }
