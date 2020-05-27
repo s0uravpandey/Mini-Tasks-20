@@ -15,3 +15,4 @@ xml.onreadystatechange = function(){
 };
 xml.open("GET","https://api.jsonbin.io/b/5ea441ca98b3d53752344cc5",true);
 xml.send();
+
