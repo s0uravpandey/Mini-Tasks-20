@@ -12,6 +12,6 @@ public class OpenweatherAPI {
     }
     public interface WeatherService2{
         @GET("data/2.5/weather?")
-        Call<PostWeather>getCurrentWeatherData(@Query("city") String city,@Query("APPID") String app_id);
+        Call<PostWeather>getCurrentWeatherData(@Query("q") String city,@Query("APPID") String app_id);
     }
 }
