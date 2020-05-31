@@ -17,14 +17,14 @@ class RegistrationView(APIView):
         try:
             dicti = {
                 'username' : request.data['username'],
-                'first_name' : request.data['first_name'],
-                'last_name' : request.data['last_name']
+                'email': request.data['email'],
+                'phone': request.data['phone']
             }
             try:
                 user = User(**dicti)
                 user.set_password(request.data['password'])
                 user.save()
-                user_det = User.objects.filter(username= request.data['username'])[0].id
+                user_det = User.objects.filter(username= request.data['username'])
                 request.data['user'] = user_det[0].id
                 serializer = AccountSerializer(data=request.data)
                 if serializer.is_valid():
@@ -51,7 +51,8 @@ class ProfileView(APIView):
     parser_classes = [JSONParser]
     permission_classes= [IsAuthenticated]
     def get(self,request):
-        query = request.user.accountmodel
+        #query = AccountModel.objects.filter(user=request.user)
+        query= request.user.accountmodel
         serializer = AccountSerializer(query,many=True)
         return Response(serializer.data,status=200)
 
