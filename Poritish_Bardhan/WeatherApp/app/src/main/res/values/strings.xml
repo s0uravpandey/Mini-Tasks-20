@@ -4,5 +4,5 @@
     <string name="Button_name">Get Current Weather Data</string>
     <string name="Lat_message">Enter the latitude</string>
     <string name="Lon_message">Enter the longitude</string>
-    <string name="city_message">Enter te city name</string>
+    <string name="city_message">Enter the city name</string>
 </resources>

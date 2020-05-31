@@ -27,13 +27,16 @@ public class MainActivity3 extends AppCompatActivity implements Choices.OnNoteLi
         mImageUrls.add("https://manula.s3.amazonaws.com/user/2525/img/gps-2.png");
         mNames.add("Any location");
 
+        mImageUrls.add("https://image.flaticon.com/icons/svg/185/185376.svg");
+        mNames.add("City name");
+
         initRecyclerView();
 
     }
 
     private void initRecyclerView(){
         RecyclerView recyclerView = findViewById(R.id.choiceList);
-        Choices adapter = new Choices(this, mNames, mImageUrls,this);
+        Choices adapter = new Choices(this,mNames,mImageUrls,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -46,6 +49,10 @@ public class MainActivity3 extends AppCompatActivity implements Choices.OnNoteLi
         }
         else if (position==1){
             Intent intent=new Intent(this,MainActivity2.class);
+            startActivity(intent);
+        }
+        else if (position==2){
+            Intent intent=new Intent(this,MainActivity7.class);
             startActivity(intent);
         }
     }
