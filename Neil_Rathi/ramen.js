@@ -60,7 +60,7 @@ div1.append(sorry);
 			//variety
 			var variety=document.createElement('p');
 			variety.textContent=jsonObj[n]["Variety"];
-			variety.insertAdjacentHTML("afterbegin", "<span class='tags'>Variety of ramen served: </span>");
+			variety.insertAdjacentHTML("afterbegin", "<span class='tags'>Variety: </span>");
 		    div.append(variety);
 			//style
 			var style=document.createElement('p');
@@ -84,17 +84,6 @@ div1.append(sorry);
 		}
 		// --------------------------------------------------------------------------------------
 		// --------------------------------------------------------------------------------------
-
-		//input for search box
-		var input=document.querySelector("input[type='text']")
-		input.addEventListener("keypress",function(event)
-		{
-			if(event.which==13)
-			{var text=this.value;
-			this.value="";
-			search(text);
-			
-		}})
 		
 		var home=document.querySelector('#home')
 		home.addEventListener("click",function()
@@ -104,6 +93,8 @@ div1.append(sorry);
 			reset('country');
 			reset('topten');
 			reset('sort');
+			input = document.getElementById("search");
+			input.value=""
 			display(jsonObj);
 		})
 		// -----------------------------------------------------------------------------------------------------------------------------------
@@ -254,14 +245,17 @@ div1.append(sorry);
 		}
 		// ---------------------------------------------------------------------------------------------------------------------------------------
 		// --------------------------------------------------------------------------------------------------------------------------------------
-		
-		function search(input)
+
+		function search()
 		{
+			
+			input = document.getElementById("search");
+    		filter = input.value.toUpperCase();
 			var chk=false;
 		
 			for(var i=0;i<36;++i)
 			{
-				if(input.toUpperCase()==jsonObj[i]["Brand"].toUpperCase())
+				if(jsonObj[i]["Brand"].toUpperCase().indexOf(filter)>-1)
 					{
 						if(chk==false)
 							destroyer(jsonObj);
