@@ -53,6 +53,9 @@ function make(i){
         for(j=0;j<Math.floor(dat[i].Stars);j++){
            stars.innerHTML = stars.innerHTML + '<i class="fa fa-star"></i>';
         }
+        if(Math.floor(dat[i].Stars)!=dat[i].Stars){
+            stars.innerHTML = stars.innerHTML + '<i class="fa fa-star-half-o"></i>';
+        }
     }
     div1.appendChild(stars);
     var variety = document.createElement('p');
@@ -82,7 +85,7 @@ all.addEventListener('click',function(){
     sortb.selectedIndex = 0;
     topt.selectedIndex = 0;
     disp.innerHTML = "";
-    show();
+    show(); 
 });
 
 function sort(){
