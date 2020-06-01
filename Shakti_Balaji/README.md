@@ -1,13 +1,15 @@
-# Frontend Task
+# TOP RAMEN RESTAURANTS
 
-Develop a Web Application that would let the users help list top Ramen restaurants of the World with the following specifications:
+The only website you need, to satisfy your Ramen needs.
 
-1) Utilize response parameters: [Brand, Variety, Style, Country, Stars, Top Ten].
-2) Implement a functionality of list top restaurants of different years on the UI. Provide a search box using which users can call for restaurant details.
-3) Visually interactive responsive design listing all the details.
-4) Create a Sorting Option using Name, Country, Stars.
-5) Depict all the other response parameters on the UI for each restaurant beautifully.
-6) A feature to list a restaurant based on the country.
-7) Use of JSON data to fetch top ramen restaurant details.
+You can look for Ramen restaurants all over the world and find out more about them. What's more is you can customize your search to meet your needs!
 
-The link to the JSON file is: <https://bit.ly/test-json>.
+# Features
+
+View the brand, variety, stye, country, stars, top ten ranking of all Ramen restaurants
+Search for a restaurant by name
+Sort restaurants according to name, ocation and ratings
+List countries based on their location
+List countries based on their year of top ten ranking
+
+Hope your quest for the best Ramen ends here :)
