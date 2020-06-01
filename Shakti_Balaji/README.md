@@ -7,9 +7,14 @@ You can look for Ramen restaurants all over the world and find out more about th
 # Features
 
 View the brand, variety, stye, country, stars, top ten ranking of all Ramen restaurants
+
 Search for a restaurant by name
+
 Sort restaurants according to name, ocation and ratings
+
 List countries based on their location
+
 List countries based on their year of top ten ranking
+
 
 Hope your quest for the best Ramen ends here :)
