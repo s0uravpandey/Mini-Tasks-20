@@ -53,6 +53,9 @@ function make(i){
         for(j=0;j<Math.floor(dat[i].Stars);j++){
            stars.innerHTML = stars.innerHTML + '<i class="fa fa-star"></i>';
         }
+        if(Math.floor(dat[i].Stars)!=dat[i].Stars){
+            stars.innerHTML = stars.innerHTML + '<i class="fa fa-star-half-o"></i>';
+        }
     }
     div1.appendChild(stars);
     var variety = document.createElement('p');
@@ -71,9 +74,9 @@ function make(i){
         topten.innerHTML = "No. " + dat[i].TopTen[6] + " in " + dat[i].TopTen[0] + dat[i].TopTen[1] + dat[i].TopTen[2] + dat[i].TopTen[3];
     }
     div1.appendChild(topten);
-    var line = document.createElement('hr');
-    div1.appendChild(line);
     disp.appendChild(div1);    
+    var line = document.createElement('hr');
+    disp.appendChild(line);
 }
 
 all.addEventListener('click',function(){
@@ -82,7 +85,7 @@ all.addEventListener('click',function(){
     sortb.selectedIndex = 0;
     topt.selectedIndex = 0;
     disp.innerHTML = "";
-    show();
+    show(); 
 });
 
 function sort(){
