@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://www.w3schools.com/lib/w3.js"></script> 
 </head>
 <body>
 	<div class="content">
@@ -20,10 +21,10 @@
 				<div class="drop">
 				<button id="top" class="sort" onclick="sort()">Sort by</button>
 				<div class="dropdata">
-					<a class="dropitem sname" href="#" onclick="namee()">Name</a>
-					<a class="dropitem sstyle" href="#">Style</a>
-					<a class="dropitem scountry" href="#">Country</a>
-					<a class="dropitem sranking" href="#">Ranking</a>
+					<a class="dropitem sname" href="#" onclick="w3.sortHTML('.items','.item','.name')">Name</a>
+					<a class="dropitem sstyle" href="#" onclick="w3.sortHTML('.items','.item','.style')">Style</a>
+					<a class="dropitem scountry" href="#" onclick="w3.sortHTML('.items','.item','.country')">Country</a>
+					<a class="dropitem sranking" href="#" onclick="w3.sortHTML('.items','.item','.topten')">Ranking</a>
 				</div>
 				</div>
 				<input class="Searchbar" name="search" type="text" onkeyup="search()" placeholder=" Search..">
@@ -641,11 +642,6 @@
 	<p class="q"></p>
 	<script src="top.js"></script>
 	<script src="search.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-	</script>
-	<script
-	src="https://code.jquery.com/jquery-3.5.1.js"
-	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-	crossorigin="anonymous"></script>
+
 </body>
 </html>

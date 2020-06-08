@@ -49,13 +49,3 @@ window.onclick = function(event) {
       }
     }
   }
-
-function namee(){
-    var dish = document.getElementsByClassName("name");
-    var brand = dish.split(',');
-    let i;
-console.log(dish);
-    for(i=0;i<37;i++){
-        document.getElementsByClassName("name")[i].innerHTML= dish[i];
-    }
-}
