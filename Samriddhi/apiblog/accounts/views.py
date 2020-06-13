@@ -6,6 +6,8 @@ from .serializers import AccountSerializer
 from django.contrib.auth.models import User
 from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework.response import Response
+import uuid 
+
 
 class RegistrationView(APIView):
     parser_classes = [JSONParser]
@@ -25,7 +27,7 @@ class RegistrationView(APIView):
                 user.set_password(request.data['password'])
                 user.save()
                 user_det = User.objects.filter(username= request.data['username'])
-                request.data['user'] = user_det[0].id
+                request.data['user'] = user_det[0].uuid
                 serializer = AccountSerializer(data=request.data)
                 if serializer.is_valid():
                     serializer.save()
