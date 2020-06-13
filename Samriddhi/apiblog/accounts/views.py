@@ -8,7 +8,7 @@ from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework.response import Response
 import uuid 
 
-
+'''
 class RegistrationView(APIView):
     parser_classes = [JSONParser]
     def get(self,request):
@@ -58,3 +58,4 @@ class ProfileView(APIView):
         serializer = AccountSerializer(query,many=True)
         return Response(serializer.data,status=200)
 
+'''
