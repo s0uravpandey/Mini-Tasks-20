@@ -1,6 +1,6 @@
 # Frontend Task
 
-Develop a Web Application that would let the users help list top Ramen restaurants of the World with the following specifications:
+I made a website for Top Rahmen that can:
 
 1) Utilize response parameters: [Brand, Variety, Style, Country, Stars, Top Ten].
 2) Implement a functionality of list top restaurants of different years on the UI. Provide a search box using which users can call for restaurant details.
