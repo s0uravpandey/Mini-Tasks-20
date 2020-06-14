@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
-    path('blogreq/', include('blogreq.urls'))
+    path('blogreq/', include('blogreq.urls')),
+    path('userac/', include('accounts.urls'))
 ]

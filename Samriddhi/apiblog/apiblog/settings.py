@@ -87,7 +87,7 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'apiblog',
+        'NAME': 'ccblogapi',
         'USER': 'postgres',
         'PASSWORD': '9457047004',
         'HOST': 'localhost'

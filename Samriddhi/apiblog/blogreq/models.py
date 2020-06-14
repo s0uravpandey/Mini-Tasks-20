@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from datetime import datetime
 
 # Create your models here.
 class Blogreq(models.Model):
@@ -8,4 +9,4 @@ class Blogreq(models.Model):
     email= models.CharField(max_length=80)
     username= models.CharField(max_length=80)
     status= models.BooleanField(default=False)
-    date_rec=models.DateField(auto_now_add=True, blank=True)
+    date_rec=models.DateTimeField(auto_now=True,null=True)

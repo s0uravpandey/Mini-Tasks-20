@@ -1,12 +1,31 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
-from rest_framework.parsers import JSONParser,MultiPartParser,FormParser
+from rest_framework import status
+from rest_framework import viewsets,permissions,generics,mixins
 from .models import AccountModel
+from datetime import date
 from .serializers import AccountSerializer
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User,Group,Permission
 from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework.response import Response
 import uuid 
+import os
+
+
+class AccountViewSet(viewsets.ModelViewSet):
+    permission_classes=[
+        permissions.IsAuthenticated,
+    ]
+    serializer_class = AccountSerializer
+
+    def get_queryset(self):
+        return self.request.user.AccountModel.all()
+
+    def put(self,request,*args,**kwargs):
+        return self.update(request,*args,**kwargs)
+
+    def perform_create(self,serializer):
+        serializer.save(owner=self.request.user)
 
 '''
 class RegistrationView(APIView):
