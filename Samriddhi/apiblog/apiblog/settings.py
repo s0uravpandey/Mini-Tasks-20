@@ -87,12 +87,19 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'apiblog',
+        'NAME': 'ccblogapi',
         'USER': 'postgres',
         'PASSWORD': '9457047004',
         'HOST': 'localhost'
     }
 }
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}'''
 
 
 # Password validation

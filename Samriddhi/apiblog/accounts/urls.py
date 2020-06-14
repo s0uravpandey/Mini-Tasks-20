@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.urls import path,include
 from .import views
+from .views import AccountViewSet
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = [
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.authtoken')),
-    path('signup/',views.RegistrationView.as_view()),
-    path('login/',views.ProfileView.as_view())
-]
+router = DefaultRouter()
+router.register('register',AccountViewSet,basename="register")
+urlpatterns = router.urls
