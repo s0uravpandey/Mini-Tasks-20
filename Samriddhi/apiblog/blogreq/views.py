@@ -1,17 +1,14 @@
-from django.shortcuts import render
-from rest_framework.views import APIView
-from rest_framework import status
-from rest_framework import viewsets,permissions,generics,mixins
+from rest_framework import viewsets,permissions
+from rest_framework import generics
 from .models import Blogreq
+from rest_framework.views import APIView
 from datetime import datetime
 from .serializers import BlogreqSerializer
-from django.contrib.auth.models import Group,Permission
-from rest_framework.permissions import IsAuthenticated,AllowAny
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 import pytz
 from datetime import tzinfo
-
-
+from django.contrib.auth.models import Permission
 
 class BlogViewSet(viewsets.ModelViewSet):
     permission_classes=[
@@ -20,13 +17,18 @@ class BlogViewSet(viewsets.ModelViewSet):
     serializer_class = BlogreqSerializer
 
     def get_queryset(self):
-        return self.request.user.Blogreq.all()
+        queryset = Blogreq.objects.all()
+        return queryset
 
     def put(self,request,*args,**kwargs):
         return self.update(request,*args,**kwargs)
 
     def perform_create(self,serializer):
-        serializer.save(owner=self.request.user,datetime=datetime.astimezone())
+        serializer.save(date_rec=datetime.now())  
 
     def delete(self,request,*args,**kwargs):
-        return self.destroy(request,*args,**kwargs)
+        return self.destroy(request,*args,**kwargs)  
+
+class BlogViewList(generics.ListAPIView):
+    queryset = Blogreq.objects.all()
+    serializer_class= BlogreqSerializer
