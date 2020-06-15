@@ -9,4 +9,4 @@ class Blogreq(models.Model):
     email= models.CharField(max_length=80)
     username= models.CharField(max_length=80)
     status= models.BooleanField(default=False)
-    date_rec=models.DateTimeField(auto_now=True,null=True)
+    date_rec=models.DateTimeField(auto_now=True,null=True) 

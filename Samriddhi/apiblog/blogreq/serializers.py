@@ -5,3 +5,4 @@ class BlogreqSerializer(serializers.ModelSerializer):
     class Meta:
         model= Blogreq
         fields= '__all__'
+        read_only_fields= ('date_rec',)  
